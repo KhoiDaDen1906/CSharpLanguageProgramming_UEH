@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mrthanh/Cơ sở lập trình/Csharp/Test3/Test3/Test3.csproj": {}
+    "/Users/mrthanh/Cơ sở lập trình/Csharp/Test3/Exercise1/Test3.csproj": {}
   },
   "projects": {
-    "/Users/mrthanh/Cơ sở lập trình/Csharp/Test3/Test3/Test3.csproj": {
+    "/Users/mrthanh/Cơ sở lập trình/Csharp/Test3/Exercise1/Test3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mrthanh/Cơ sở lập trình/Csharp/Test3/Test3/Test3.csproj",
+        "projectUniqueName": "/Users/mrthanh/Cơ sở lập trình/Csharp/Test3/Exercise1/Test3.csproj",
         "projectName": "Test3",
-        "projectPath": "/Users/mrthanh/Cơ sở lập trình/Csharp/Test3/Test3/Test3.csproj",
+        "projectPath": "/Users/mrthanh/Cơ sở lập trình/Csharp/Test3/Exercise1/Test3.csproj",
         "packagesPath": "/Users/mrthanh/.nuget/packages/",
-        "outputPath": "/Users/mrthanh/Cơ sở lập trình/Csharp/Test3/Test3/obj/",
+        "outputPath": "/Users/mrthanh/Cơ sở lập trình/Csharp/Test3/Exercise1/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mrthanh/.nuget/NuGet/NuGet.Config"
