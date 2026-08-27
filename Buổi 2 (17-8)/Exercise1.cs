@@ -1,6 +1,6 @@
-﻿internal class Program
+﻿internal class Ex1
 {
-    private static void Main(string[] args)
+    private static void Main2(string[] args)
     {
         // 1. Add / sum 2 numbers.
         int a = 5;
