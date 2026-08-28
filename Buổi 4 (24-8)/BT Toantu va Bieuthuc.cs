@@ -1,6 +1,6 @@
 using Microsoft.VisualBasic;
 
-internal class Ex3
+internal class Toantu_va_Bieuthuc
 {
     /// <summary>
     /// Write a C# Sharp program that takes two numbers as input and    

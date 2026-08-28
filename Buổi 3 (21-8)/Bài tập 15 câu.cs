@@ -422,7 +422,7 @@ internal class Baitap15cau
         }
         Console.WriteLine($"Tổng phí đỗ xe: {tong_chi_phi:#,##0} VNĐ");
     }
-    private static void Main(string[] args)
+    private static void Main7(string[] args)
     {
         // Ex1();
         // Console.WriteLine("Press any letter to move to next Ex:");
