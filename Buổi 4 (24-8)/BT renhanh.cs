@@ -1,4 +1,4 @@
-internal class Program
+internal class BTrenhanh
 {
     /// <summary>
     /// Write a C# Sharp program to check whether a given number is even or odd.
@@ -83,7 +83,7 @@ internal class Program
             {
                 System.Console.WriteLine(" 3 Cạnh bạn nhập chưa hợp lệ! Vui lòng nhập lại");
             }
-        } while (thoa_man = false); // bắt người dùng nhập đến khi nào thoả mãn điều kiện là một tam giác thì ngưng.
+        } while (thoa_man == false); // bắt người dùng nhập đến khi nào thoả mãn điều kiện là một tam giác thì ngưng.
 
         if (a == b && b == c)
         {
@@ -99,7 +99,7 @@ internal class Program
         }
         else System.Console.WriteLine("Tam giác này là tam giác bình thường");
     }
-    private static void Main(string[] args)
+    private static void Main8(string[] args)
     {
     //    Ex1();
     //    System.Console.WriteLine("Press any button to move to the next Ex: ");
@@ -112,9 +112,7 @@ internal class Program
     //    Ex3();
     //    System.Console.WriteLine("Press any button to move to the next Ex: ");
     //    Console.ReadKey(); 
-
-       Ex4();
-       System.Console.WriteLine("Press any button to move to the next Ex: ");
-       Console.ReadKey();
+            
+        Ex4();
     }
 }

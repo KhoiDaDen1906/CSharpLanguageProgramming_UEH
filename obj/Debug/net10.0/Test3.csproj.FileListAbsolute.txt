@@ -9,3 +9,7 @@
 /Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/obj/Debug/net10.0/Test3.dll
 /Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/obj/Debug/net10.0/refint/Test3.dll
 /Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/obj/Debug/net10.0/Test3.pdb
+/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/bin/Debug/net10.0/Test3.deps.json
+/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/bin/Debug/net10.0/Test3.runtimeconfig.json
+/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/obj/Debug/net10.0/Test3.genruntimeconfig.cache
+/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/obj/Debug/net10.0/ref/Test3.dll

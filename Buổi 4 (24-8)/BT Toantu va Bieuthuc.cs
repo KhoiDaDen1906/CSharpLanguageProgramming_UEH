@@ -107,15 +107,19 @@ internal class Toantu_va_Bieuthuc
         Bai_1();
         Console.WriteLine("Press any button to move to Ex2: ");
         Console.ReadKey();
+
         Bai_2();
         Console.WriteLine("Press any button to move to Ex3: ");
         Console.ReadKey();
+        
         Bai_3();
         Console.WriteLine("Press any button to move to Ex4: ");
         Console.ReadKey();
+        
         Bai_4();
         Console.WriteLine("Press any button to move to Ex5: ");
         Console.ReadKey();
+        
         Bai_5();
         
     }
