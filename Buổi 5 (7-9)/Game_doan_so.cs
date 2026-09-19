@@ -11,7 +11,7 @@ internal class Game_doan_so
     /// Sau mỗi lượt chơi hỏi người chơi có muốn chơi tiếp hay không. 
     /// Thống kê số lần chơi của người chơi. 
     /// </summary>
-    private static void Main()
+    private static void Main1212()
     {
         bool tiep_tuc_choi = true;
         int so_lan_doan, dem_thang = 0;
