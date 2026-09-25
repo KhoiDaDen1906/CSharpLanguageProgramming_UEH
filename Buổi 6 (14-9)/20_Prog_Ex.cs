@@ -536,7 +536,7 @@ internal class _20_Prog_Ex
 
         System.Console.WriteLine($"There are {dem_tu} words in this sentence!");
     }
-    private static void Main(string[] args)
+    private static void Main1234567(string[] args)
     {
         // Ex1();
         // System.Console.WriteLine("Type any key to move to the next Ex: ");
