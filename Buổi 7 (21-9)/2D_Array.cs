@@ -169,7 +169,7 @@ static int [,] Create_Random_NxM_Array(int row_num , int col_num)
         }
         System.Console.Write("]");
     }
-    private static void Main(string[] args)
+    private static void Main765(string[] args)
     {
         System.Console.WriteLine("Enter the number of rows you want: ");
         int so_dong = int.Parse(Console.ReadLine() ?? "3");

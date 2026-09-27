@@ -4,12 +4,12 @@ internal class Baitap15cau
 {
     static void Ex1()
     {
-        float csd_cu, csd_moi;
+        decimal csd_cu, csd_moi;
 
         Console.Write("Nhập chỉ số điện cũ: ");
-        csd_cu = float.Parse(Console.ReadLine());
+        csd_cu = decimal.Parse(Console.ReadLine());
         Console.Write("Nhập chỉ số điện mới: ");
-        csd_moi = float.Parse(Console.ReadLine());
+        csd_moi = decimal.Parse(Console.ReadLine());
         do
         {   if (csd_moi > csd_cu)
                 break;
@@ -17,30 +17,38 @@ internal class Baitap15cau
                 Console.WriteLine("Chỉ số mới phải lớn hơn chỉ số cũ: ");
         } while (true);
 
-            float dientieuthu = csd_moi - csd_cu;
-            float tien_truoc_thue;
+        decimal dientieuthu = csd_moi - csd_cu;
+        decimal so_dien_chua_tinh = dientieuthu;
+        decimal tien_truoc_thue = 0;
+        decimal da_dung = 0;
 
-            if (dientieuthu > 0 && dientieuthu <= 50)
-            tien_truoc_thue = dientieuthu * 1806;
+        // 50kwh dau tien.
+        da_dung = Math.Min(so_dien_chua_tinh, 50m);
+        tien_truoc_thue += da_dung * 1806m;
+        so_dien_chua_tinh -= da_dung;
+        //50kwh tiep theo
+        da_dung = Math.Min(so_dien_chua_tinh, 50m);
+        tien_truoc_thue += da_dung * 1866m;
+        so_dien_chua_tinh -= da_dung;
+        //100kwh bac 3
+        da_dung = Math.Min(so_dien_chua_tinh, 100m);
+        tien_truoc_thue += da_dung * 2167m;
+        so_dien_chua_tinh -= da_dung;
+        // 100kwh bac 4
+        da_dung = Math.Min(so_dien_chua_tinh, 100m);
+        tien_truoc_thue += da_dung * 2729m;
+        so_dien_chua_tinh -= da_dung;
+        // bac 5: cac kwh con lai.
+        tien_truoc_thue += so_dien_chua_tinh * 3050m;
+        so_dien_chua_tinh -= so_dien_chua_tinh;
 
-            else if (dientieuthu > 50 && dientieuthu <= 100)
-            tien_truoc_thue = (50*1806) + (dientieuthu - 51)*1866;
+        decimal thue_vat = tien_truoc_thue * 0.08m;
+        decimal tien_sau_thue = tien_truoc_thue + thue_vat;
 
-            else if (dientieuthu >100 && dientieuthu <=200)
-            tien_truoc_thue = (50*1806) + (50*1866) + (dientieuthu - 101) * 2167;
-
-            else if (dientieuthu > 200 && dientieuthu <= 300)
-            tien_truoc_thue = (50*1806) + (50*1866) + (100*2167) + (dientieuthu - 201) * 2729;
-
-            else
-            tien_truoc_thue = (50*1806) + (50*1866) + (100*2167) + (300*2729) + (dientieuthu - 301) * 3050;
-
-            float tien_sau_thue = tien_truoc_thue * 1.08f;
-
-            Console.WriteLine($"Số điện tiêu thụ là: {dientieuthu} kWh");
-            Console.WriteLine($"Tiền điện chưa thuế là: {tien_truoc_thue} kWh");
-            Console.WriteLine($"Thuế VAT (8%): {tien_truoc_thue * 0.08} VNĐ");
-            Console.WriteLine($"Tổng thanh toán: {tien_sau_thue} VNĐ ");  
+        Console.WriteLine($"\nSố điện tiêu thụ là: {dientieuthu} kWh");
+        Console.WriteLine($"Tiền điện chưa thuế là: {tien_truoc_thue:#,##0} VNĐ");
+        Console.WriteLine($"Thuế VAT (8%): {thue_vat:#,##0} VNĐ");
+        Console.WriteLine($"Tổng thanh toán: {tien_sau_thue:#,##0} VNĐ");
     }
     static void Ex2()
     {
@@ -101,6 +109,10 @@ internal class Baitap15cau
                 tien_sau_khi_doi = Math.Round(tien_nhan_dc / 32100m,2);
                 don_vi_tien_te = "GBP";
                 break;
+            // Cải thiện thêm ở chỗ người dùng nhập linh tinh.
+            default:
+            System.Console.WriteLine("Lỗi! Loại ngoại tệ không hợp lệ.");
+            return;    
         }
         Console.WriteLine($"Phí dịch vụ (0,5%): {phi_dich_vu}");
         Console.WriteLine($"Tiền VNĐ tính đổi: {tien_nhan_dc}");
@@ -114,7 +126,7 @@ internal class Baitap15cau
         do 
         {
         Console.WriteLine("Nhập vào ngày sinh (dd/MM/yyyy)");
-        date = Console.ReadLine();
+        date = Console.ReadLine() ?? "19/06/2007";
         
         bool hop_le = DateTime.TryParseExact
         (date, "dd/MM/yyyy", 
@@ -141,7 +153,7 @@ internal class Baitap15cau
         TimeSpan da_song = ngay_hien_tai - ngay_sinh;
         int so_ngay_da_song = (int) da_song.TotalDays;
 
-        DateTime sn_tieptheo = new DateTime (ngay_hien_tai.Year , ngay_sinh.Month , ngay_sinh.Day);
+        DateTime sn_tieptheo = ngay_sinh.AddYears(ngay_hien_tai.Year - ngay_sinh.Year);
         if(sn_tieptheo < ngay_hien_tai)
         {
             sn_tieptheo = sn_tieptheo.AddYears(1);
@@ -174,7 +186,9 @@ internal class Baitap15cau
         tc_TA = int.Parse(Console.ReadLine());
 
         double diem_trung_binh = (diem_Csharp * tc_Csharp + diem_toanrr * tc_toanrr + diem_TA * tc_TA) 
-                                / (tc_Csharp + tc_TA + tc_toanrr);
+                                / (double)(tc_Csharp + tc_TA + tc_toanrr);
+
+        diem_trung_binh = Math.Round(diem_trung_binh,2);       
         
         char thang_diem_chu;
         double thang_diem_so;
@@ -215,6 +229,47 @@ internal class Baitap15cau
         System.Console.WriteLine($"Điểm chữ quy đổi: {thang_diem_chu}");
         System.Console.WriteLine($"Điểm GPA thang 4: {thang_diem_so}");
         System.Console.WriteLine($"Xếp loại học lực: {hoc_luc}");   
+    }
+    static void Ex6()
+    {
+        //B1. Nhập họ và tên vào, bỏ hết khoảng trắng đầu và cuối, Lowercase.
+        System.Console.WriteLine("Nhập vào họ và tên: ");
+        string ho_va_ten_raw = Console.ReadLine() ?? " tRầN đĂnG KhÔi ";
+        ho_va_ten_raw = ho_va_ten_raw.Trim().ToLower();
+        //B2. Cắt chuôi thành mảng.
+        string[]  ho_va_ten_splited = ho_va_ten_raw.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+
+        //B3. Viết hoa chữ cái đầu.
+        for (int i = 0 ; i < ho_va_ten_splited.Length; i++)
+        {
+            char c = char.ToUpper(ho_va_ten_splited[i][0]);
+            string cac_chu_con_lai = ho_va_ten_splited[i].Substring(1);
+            ho_va_ten_splited[i] = c + cac_chu_con_lai;
+        }
+        //B4. Nối các ký tự lại thành tên.
+        string ho_va_ten_processed = string.Join(" ", ho_va_ten_splited);
+
+        //B5. Tạo username (khoi.trandang) va email.
+        string username = ho_va_ten_splited[ho_va_ten_splited.Length - 1].ToLower();
+        string ho_dem = "";
+        for (int i = 0 ; i < ho_va_ten_splited.Length - 1; i ++)
+        {
+            ho_dem += ho_va_ten_splited[i].ToLower();
+        }
+        string final_username = username + "." + ho_dem;
+        string email = final_username + "@company.edu.vn";
+
+        System.Console.WriteLine($"Họ tên chuẩn hoá: {ho_va_ten_processed} ");
+        
+        string ten_dem = "";
+        for (int i = 1 ; i < ho_va_ten_splited.Length -1 ; i ++)
+        {
+            ten_dem += ho_va_ten_splited[i] + " ";
+        }
+        ten_dem = ten_dem.Trim();
+        System.Console.WriteLine($"Họ : {ho_va_ten_splited[0]} | Tên đệm: {ten_dem} | Tên: {ho_va_ten_splited[ho_va_ten_splited.Length -1]}");
+        System.Console.WriteLine($"Username tạo tự động: {final_username}");
+        System.Console.WriteLine($"Email cấp phát: {email}");
     }
     static void Ex7()
     {
@@ -422,7 +477,7 @@ internal class Baitap15cau
         }
         Console.WriteLine($"Tổng phí đỗ xe: {tong_chi_phi:#,##0} VNĐ");
     }
-    private static void Main7(string[] args)
+    private static void Main(string[] args)
     {
         // Ex1();
         // Console.WriteLine("Press any letter to move to next Ex:");
@@ -444,6 +499,10 @@ internal class Baitap15cau
         // Console.WriteLine("Press any letter to move to next Ex:");
         // Console.ReadKey();
 
+        Ex6();
+        Console.WriteLine("Press any letter to move to next Ex:");
+        Console.ReadKey();
+
         // Ex7();
         // Console.WriteLine("Press any letter to move to next Ex:");
         // Console.ReadKey();
@@ -460,8 +519,8 @@ internal class Baitap15cau
         // Console.WriteLine("Press any letter to move to next Ex:");
         // Console.ReadKey();
 
-        Ex13();
-        Console.WriteLine("Press any letter to move to next Ex:");
-        Console.ReadKey();
+        // Ex13();
+        // Console.WriteLine("Press any letter to move to next Ex:");
+        // Console.ReadKey();
     }
 }

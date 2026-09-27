@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/Test3.csproj",
-      "projectName": "Test3",
-      "projectPath": "/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/Test3.csproj",
+      "projectUniqueName": "/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/CSLT.csproj",
+      "projectName": "CSLT",
+      "projectPath": "/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/CSLT.csproj",
       "packagesPath": "/Users/mrthanh/.nuget/packages/",
       "outputPath": "/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/obj/",
       "projectStyle": "PackageReference",

@@ -1,0 +1,15 @@
+/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/bin/Debug/net10.0/CSLT
+/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/bin/Debug/net10.0/CSLT.deps.json
+/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/bin/Debug/net10.0/CSLT.runtimeconfig.json
+/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/bin/Debug/net10.0/CSLT.dll
+/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/bin/Debug/net10.0/CSLT.pdb
+/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/obj/Debug/net10.0/CSLT.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/obj/Debug/net10.0/CSLT.AssemblyInfoInputs.cache
+/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/obj/Debug/net10.0/CSLT.AssemblyInfo.cs
+/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/obj/Debug/net10.0/CSLT.csproj.CoreCompileInputs.cache
+/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/obj/Debug/net10.0/CSLT.sourcelink.json
+/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/obj/Debug/net10.0/CSLT.dll
+/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/obj/Debug/net10.0/refint/CSLT.dll
+/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/obj/Debug/net10.0/CSLT.pdb
+/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/obj/Debug/net10.0/CSLT.genruntimeconfig.cache
+/Users/mrthanh/Cơ sở lập trình/Csharp/Bài tập trên lớp/obj/Debug/net10.0/ref/CSLT.dll
