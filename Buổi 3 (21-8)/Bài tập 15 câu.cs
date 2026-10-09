@@ -305,11 +305,11 @@ internal class Baitap15cau
         Console.WriteLine("Nhập vào chuỗi 6 số mã OTP: ");
         chuoi_OTP = Console.ReadLine() ?? "" ; // ?? "" để đề phòng trường hợp không nhập gì => lấy chuỗi rỗng.
 
-
         Console.WriteLine("Nhập vào số phút đã trôi qua: ");
         int so_phut_troi_qua = int.Parse(Console.ReadLine() ?? "0"); // nếu không nhập gì => lấy 0
         System.Console.WriteLine("Nhập vào số giây đã trôi qua: ");
         int so_giay_troi_qua = int.Parse(Console.ReadLine() ?? "0"); // nếu không nhập gì => lấy 0
+        
         System.Console.WriteLine($"Khoảng thời gian đã trôi qua là: {so_phut_troi_qua} phút {so_giay_troi_qua} giây ");
         DateTime thoi_gian_nhap_ma = creation_time.AddMinutes(so_phut_troi_qua).AddSeconds(so_giay_troi_qua);
         TimeSpan khoang_thoi_gian_chenh_lech = thoi_gian_nhap_ma - creation_time;
@@ -477,7 +477,7 @@ internal class Baitap15cau
         }
         Console.WriteLine($"Tổng phí đỗ xe: {tong_chi_phi:#,##0} VNĐ");
     }
-    private static void Main(string[] args)
+    private static void Main09(string[] args)
     {
         // Ex1();
         // Console.WriteLine("Press any letter to move to next Ex:");

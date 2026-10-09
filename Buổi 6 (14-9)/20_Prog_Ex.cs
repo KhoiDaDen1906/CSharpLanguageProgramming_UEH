@@ -131,7 +131,7 @@ internal class _20_Prog_Ex
         {
             return false;
         }
-        for (int i = 2; i < a/2; i ++)
+        for (int i = 2; i < a/2; i ++) // điều kiện có thể là i * i <= n
         {
             if (a % i == 0)
             {
