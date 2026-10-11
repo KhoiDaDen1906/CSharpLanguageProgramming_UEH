@@ -308,7 +308,7 @@ internal class String
         System.Console.WriteLine("Error: The search substring was not found in the original string!");
     } 
     }
-    private static void Main(string[] args)
+    private static void Main67(string[] args)
     {
         // InputStringAndPrintString();
         // Length_of_string();
